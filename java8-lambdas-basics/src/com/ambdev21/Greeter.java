@@ -8,8 +8,15 @@ public class Greeter {
 	
 	public static void main(String[] args) {
 		Greeter greeter = new Greeter();
-		HelloWorldGreeting helloWorldGreeting = new HelloWorldGreeting();
+		Greeting helloWorldGreeting = new HelloWorldGreeting();
 		greeter.greet(helloWorldGreeting);
+		
+		//MyLambdaInterfaceType myLambdaFunction = () -> System.out.println("Hello world with lambda!");
+		Greeting myLambdaFunction = () -> System.out.println("Hello world with lambda!");
 	}
 
 }
+
+/*interface MyLambdaInterfaceType{
+	void foo();
+}*/
