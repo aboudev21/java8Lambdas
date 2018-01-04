@@ -9,8 +9,8 @@ public class TypeInferenceExample {
 	public static void printLambda(StringLengthLambda l){
 		System.out.println(l.getLength("Hello lambda"));
 	}
-}
-
-interface StringLengthLambda{
-	int getLength(String s);
+	
+	interface StringLengthLambda{
+		int getLength(String s);
+	}
 }
