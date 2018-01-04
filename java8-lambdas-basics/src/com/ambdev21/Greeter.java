@@ -8,15 +8,18 @@ public class Greeter {
 	
 	public static void main(String[] args) {
 		Greeter greeter = new Greeter();
-		Greeting helloWorldGreeting = new HelloWorldGreeting();
-		greeter.greet(helloWorldGreeting);
 		
-		//MyLambdaInterfaceType myLambdaFunction = () -> System.out.println("Hello world with lambda!");
-		Greeting myLambdaFunction = () -> System.out.println("Hello world with lambda!");
+		Greeting lambdaGreeting = () -> System.out.println("Hello world with lambda!");
+		Greeting innerClassGreeting = new Greeting() {
+			@Override
+			public void perform() {
+				System.out.println("Hello world with anonym inner class!");
+			}
+		};
+		
+		greeter.greet(lambdaGreeting);
+		greeter.greet(innerClassGreeting);
+		
 	}
 
 }
-
-/*interface MyLambdaInterfaceType{
-	void foo();
-}*/
